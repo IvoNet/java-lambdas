@@ -1,22 +1,22 @@
 # java-lambdas
 
-TODO Description of the project here
+A few lambda examples
 
-# Build
+# Lambda
 
-See the `buildAndDeploy.sh` script
+Lambda Expressions in Java are used to:
+
+- Implement functional interfaces
+- Iterate, filter and extract data from collections
+- 
 
 
-See `run.sh`. It explains how you can run locally without constantly having to rebuild the whole docker image.
-You only need to rebuild the war file.
+## Topics:
 
-
-You can follow the logging by running `logs.sh` when you run the local version
-
-# Run and Build
-
-See the `buildAndrun.sh` script
-
-# Example endpoint
-
-[http://localhost:8080/java-lambdas/rest/example](http://localhost:8080/java-lambdas/rest/example)
+- Anonymous classes
+- Functional Interfaces
+- Comparator 
+- Consumer 
+- Predicate 
+- Supplier
+- Imparative vs Iterative
