@@ -37,6 +37,7 @@ public class FunctionExample {
         final Person renesme = new Person("Renesme", "Cullins", 18);
 
         final List<Person> persons = List.of(ron, jan, niels, kate, renesme);
+
         final Function<Person, Integer> age = person -> person.getAge();
 
         final Function<Person, Integer> age2 = Person::getAge;

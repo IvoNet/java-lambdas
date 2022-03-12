@@ -66,6 +66,8 @@ public class Sample {
         //This is only possible if you do not want to manipulate the input
         numbers.forEach(System.out::println);
 
+        numbers.forEach(Sample::extracted);
+
 
         //How about multiple params
         System.out.println(numbers.stream()
@@ -84,5 +86,10 @@ public class Sample {
         //reduce it to method reference
         System.out.println(numbers.stream()
                                   .reduce(0, Integer::sum));
+    }
+
+    private static void extracted(final Integer integer) {
+        final var format = String.format("A%s", integer);
+        System.out.println("format = " + format);
     }
 }

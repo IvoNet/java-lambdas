@@ -39,7 +39,7 @@ public class PredicateExample {
         final List<Integer> nums = List.of(48, 2, 3, 1, 5, 6, 7, 8, 9, 12);
 
         nums.stream()
-            .filter(new BiggerThanFive()) // .and(new EvenNumber()).and(integer -> integer < 30)
+            .filter(new BiggerThanFive()) //.and(new EvenNumber()).and(integer -> integer < 30))
             .filter(new EvenNumber())
             .filter(smallerThanThirty)
             .forEach(System.out::println);

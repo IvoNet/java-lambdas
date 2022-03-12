@@ -3,6 +3,7 @@ package nl.ordina.collectors;
 import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.*;
@@ -35,8 +36,8 @@ public class Sample {
         //toMap
         final Map<String, Integer> map = IntStream.range(1, 25)
                                                   .boxed()
-                                                  .collect(toMap(o -> String.format("KEY%s", o),
-                                                                 integer -> integer));
+                                                  .collect(toMap(key -> String.format("KEY%s", key),
+                                                                 Function.identity()));
         System.out.println("map = " + map);
 
         //joining
@@ -72,6 +73,7 @@ public class Sample {
                                                              .boxed()
                                                              .collect(groupingBy(integer -> (integer < 10 || integer > 20),
                                                                                  toList()));
+        System.out.println("grouped = " + grouped);
         System.out.println("grouped inclusive = " + grouped.get(true));
         System.out.println("grouped exclusive = " + grouped.get(false));
 
